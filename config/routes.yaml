@@ -7,3 +7,7 @@ controllers:
 index:
     path: /
     controller: App\Controller\IndexController::index
+
+read:
+    path: /read
+    controller: App\Controller\crud\ReadController::read

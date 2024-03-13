@@ -1,0 +1,16 @@
+:root {
+    --main-color: #759eff;
+    --secondary-color: #75c7ff;
+    --dark-color: #525558;
+}
+
+textarea {
+    resize: none;
+    font-size: 16px;
+    height: 128px;
+}
+
+body {
+    background-color: #f0ffff;
+    height: 100vh;
+}

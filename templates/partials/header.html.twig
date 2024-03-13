@@ -1,0 +1,21 @@
+{% extends 'base/base.html.twig' %}
+{% block header %}
+<header>
+    <nav class="container">
+        <ul>
+            <li>
+                <strong><a href="/"> CrudPHP </a></strong>
+            </li>
+        </ul>
+        <ul>
+            <li><a href="">Create</a></li>
+            <li><a href="/read">Read</a></li>
+            <li><a id="search" href="#" role="button" class="contrast"><i class="iconoir-search" style="margin: 0 5px -2px 0"></i>Search</a></li>
+        </ul>
+    </nav>
+    <div id="input-div">
+        <input type="text" id="searchinput" name="lastname" placeholder="Search" autocomplete="off">
+        <button id="meubtn">Pesquisar</button>
+    </div>
+</header>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'base/base.html.twig' %}
+{% block content %}
+{% include 'partials/header.html.twig' %}
+
+<article class="container">
+    <table role="grid">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">First name</th>
+                <th scope="col">Last name</th>
+                <th scope="col">E-mail</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <th scope="row">Tes</th>
+                <th scope="row">te</th>
+                <th scope="row">aaa@</th>
+                <th scope="row">
+                    <a id="see" data-tooltip="Read"><i class="iconoir-doc-magnifying-glass-in"></i></a>
+                    <a id="edit" data-tooltip="Edit"><i class="iconoir-page-edit"></i></a>
+                    <a id="del" data-tooltip="Delete"><i class="iconoir-multiple-pages-xmark"></i></a>
+                </th>
+            </tr>
+        </tbody>
+    </table>
+</article>
+{% endblock %}
