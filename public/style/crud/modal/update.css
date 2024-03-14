@@ -1,0 +1,16 @@
+.line-form {
+    display: flex;
+}
+
+
+.line-form input[name="id"] {
+    width: 64px;
+}
+
+.line-form div {
+    margin: 0 8px;
+}
+
+#edit-form {
+    margin-bottom: -8px;
+}

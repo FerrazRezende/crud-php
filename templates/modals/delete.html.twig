@@ -1,0 +1,16 @@
+{% block modalDelete %}
+<dialog id="del-dialog">
+    <article>
+        <h2>Do you really want to delete this client?</h2>
+        <p>
+            It will not be possible to recover this data after it is deleted.
+        </p>
+        <footer>
+            <button style="background-color: rgba(253,0,55,0.89)" >Delete</button>
+            <button class="secondary" id="close-modal">
+                Cancel
+            </button>
+        </footer>
+    </article>
+</dialog>
+{% endblock %}

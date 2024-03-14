@@ -1,0 +1,28 @@
+{% block modalUpdate %}
+<dialog id="update-modal">
+    <article>
+        <form action="" method="post" id="edit-form">
+            <div class="line-form container">
+                <div>
+                    <label>ID</label>
+                    <input name="id" value="1" readonly>
+                </div>
+                <div>
+                    <label>First name</label>
+                    <input name="first-name" value="Matheus">
+                </div>
+                <div>
+                    <label>Last name</label>
+                    <input name="last-name" value="Ferraz">
+                </div>
+            </div>
+            <div>
+                <label>E-mail</label>
+                <input name="email" value="mtsferraz.rezende@gmail.com">
+            </div>
+            <input type="submit" value="Update">
+        </form>
+        <button id="close-up-modal" class="secondary">Close</button>
+    </article>
+</dialog>
+{% endblock %}
