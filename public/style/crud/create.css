@@ -1,0 +1,8 @@
+#infos {
+    display: flex;
+    justify-content: start;
+}
+
+#infos label {
+    margin-right: 1%;
+}

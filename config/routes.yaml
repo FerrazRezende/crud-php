@@ -8,6 +8,10 @@ index:
     path: /
     controller: App\Controller\IndexController::index
 
+create:
+    path: /create
+    controller: App\Controller\crud\CreateController::create
+
 read:
     path: /read
     controller: App\Controller\crud\ReadController::read

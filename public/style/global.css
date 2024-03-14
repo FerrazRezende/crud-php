@@ -4,6 +4,10 @@
     --dark-color: #525558;
 }
 
+a {
+    cursor: pointer;
+}
+
 textarea {
     resize: none;
     font-size: 16px;

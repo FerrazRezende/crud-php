@@ -1,0 +1,24 @@
+{% extends 'base/base.html.twig' %}
+{% block content %}
+{% include 'partials/header.html.twig' %}
+<article class="container" style="padding: 2%;">
+    <h2>Create Section</h2>
+    <form action="{{ path('create') }}" method="post" >
+        <div id="infos">
+            <label>
+                First name
+                <input type="text" id="firstname" name="firstname" placeholder="First name">
+            </label>
+            <label>
+                Last name
+                <input type="text" id="lastname" name="lastname" placeholder="Last name">
+            </label>
+        </div>
+        <label for="email">
+            E-mail
+            <input type="email" id="email" name="email" placeholder="Email address">
+        </label>
+        <button type="submit">Submit</button>
+    </form>
+</article>
+{% endblock %}
