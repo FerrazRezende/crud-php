@@ -18,6 +18,7 @@
             E-mail
             <input type="email" id="email" name="email" placeholder="Email address">
         </label>
+        <input type="hidden" id="csrf_token" name="csrf_token" value="{{ csrf_token }}">
         <button type="submit">Submit</button>
     </form>
 </article>

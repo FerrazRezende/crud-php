@@ -1,7 +1,7 @@
 $(document).ready(() => {
     const closeButton = $('#close-up-modal');
     const modal = $('#update-modal');
-    const editButton = $('#edit')
+    const editButton = $('.edit')
 
     editButton.on({
         click: () => {

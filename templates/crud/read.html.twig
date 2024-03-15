@@ -14,17 +14,19 @@
             </tr>
         </thead>
         <tbody>
+        {% for client in clients %}
             <tr>
-                <th scope="row">1</th>
-                <th scope="row">Tes</th>
-                <th scope="row">te</th>
-                <th scope="row">aaa@</th>
-                <th scope="row">
-                    <a id="see" data-tooltip="Read"><i class="iconoir-doc-magnifying-glass-in"></i></a>
-                    <a id="edit" data-tooltip="Edit"><i class="iconoir-page-edit"></i></a>
-                    <a id="del" data-tooltip="Delete"><i class="iconoir-multiple-pages-xmark"></i></a>
-                </th>
+                <th scope="row">{{ client.id }}</th>
+                <td>{{ client.firstName }}</td>
+                <td>{{ client.lastName }}</td>
+                <td>{{ client.email }}</td>
+                <td>
+                    <a class="see" data-tooltip="Read"><i class="iconoir-doc-magnifying-glass-in"></i></a>
+                    <a class="edit" data-tooltip="Edit"><i class="iconoir-page-edit"></i></a>
+                    <a class="del" data-tooltip="Delete" data-delete-url="{{ path('delete', {'id': client.id}) }}"><i class="iconoir-multiple-pages-xmark"></i></a>
+                </td>
             </tr>
+        {% endfor %}
         </tbody>
     </table>
 </article>

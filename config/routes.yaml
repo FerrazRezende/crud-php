@@ -15,3 +15,7 @@ create:
 read:
     path: /read
     controller: App\Controller\crud\ReadController::read
+
+delete:
+    path: /delete/{id}
+    controller: App\Controller\crud\DeleteController::delete
