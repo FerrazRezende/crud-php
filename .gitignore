@@ -23,3 +23,9 @@
 /public/assets/
 /assets/vendor/
 ###< symfony/asset-mapper ###
+
+## Idea files
+/.idea/
+
+## PGSQL data files
+/crudphp/

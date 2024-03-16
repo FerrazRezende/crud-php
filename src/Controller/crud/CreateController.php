@@ -2,14 +2,14 @@
 
 namespace App\Controller\crud;
 
-use Doctrine\ORM\Mapping\Entity;
-use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Doctrine\ORM\EntityManagerInterface;
 use App\Entity\Client;
+use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Security\Csrf\CsrfToken;
 use Symfony\Component\Security\Csrf\CsrfTokenManagerInterface;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+
 
 class CreateController extends AbstractController
 {
@@ -40,11 +40,13 @@ class CreateController extends AbstractController
             $em->persist($client);
             $em->flush();
 
+            $this->addFlash('success', 'Cliente criado com sucesso!');
+
             return $this->redirectToRoute('index');
 
         }
         return $this->render('crud/create.html.twig', [
-            'csrf_token' => $token
+            'csrf_token' => $token,
         ]);
     }
 }

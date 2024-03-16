@@ -1,0 +1,13 @@
+.alert {
+    position: absolute;
+    right: 0;
+    padding: 16px;
+    width: 320px;
+    height: 72px;
+    text-align: center;
+}
+
+.alert-success {
+    background-color: #4CAF50;
+    color: white;
+}
