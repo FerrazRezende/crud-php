@@ -4,23 +4,24 @@
         <form action="" method="post" id="edit-form">
             <div class="line-form container">
                 <div>
-                    <label>ID</label>
-                    <input name="id" value="1" readonly>
+                    <label>ID
+                        <input name="id" value="{{ client.id }}" readonly>
+                    </label>
                 </div>
                 <div>
                     <label>First name
-                        <input name="first-name" value="Matheus">
+                        <input name="first-name" value="{{ client.firstName }}">
                     </label>
                 </div>
                 <div>
                     <label>Last name
-                        <input name="last-name" value="Ferraz">
+                        <input name="last-name" value="{{ client.lastName }}">
                     </label>
                 </div>
             </div>
             <div>
                 <label>E-mail
-                    <input name="email" value="mtsferraz.rezende@gmail.com">
+                    <input name="email" value="{{ client.email }}">
                 </label>
             </div>
             <input type="submit" value="Update">

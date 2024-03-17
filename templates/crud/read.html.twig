@@ -14,7 +14,7 @@
             </tr>
         </thead>
         <tbody>
-        {% for client in clients %}
+        {% for client in paginator %}
             <tr>
                 <th scope="row">{{ client.id }}</th>
                 <td>{{ client.firstName }}</td>
@@ -23,13 +23,30 @@
                 <td>
                     <a class="see" data-tooltip="Read"><i class="iconoir-doc-magnifying-glass-in"></i></a>
                     <a class="edit" data-tooltip="Edit"><i class="iconoir-page-edit"></i></a>
-                    <a class="del" data-tooltip="Delete" data-delete-url="{{ path('delete', {'id': client.id}) }}"><i class="iconoir-multiple-pages-xmark"></i></a>
+                    <a class="del" data-tooltip="Delete"><i class="iconoir-multiple-pages-xmark"></i></a>
                 </td>
             </tr>
+            {% include 'modals/delete.html.twig' with {'client': client} %}
+            {% include 'modals/update.html.twig' with {'client': client} %}
         {% endfor %}
         </tbody>
     </table>
+    <div class="navigation">
+        <label>
+            Páginas:
+            {% if paginator is not empty %}
+                {% set page = paginator.getQuery().getFirstResult() / paginator.getQuery().getMaxResults() + 1 %}
+                {% set pageCount = (paginator.count() / paginator.getQuery().getMaxResults())|round(0, 'ceil') %}
+                {% for i in 1..pageCount %}
+                    {% if i == page %}
+                        <span>{{ i }}</span>
+                    {% else %}
+                        <a href="{{ path('read', {'page': i}) }}">{{ i }}</a>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+        </label>
+    </div>
 </article>
-{% include 'modals/delete.html.twig' %}
-{% include 'modals/update.html.twig' %}
+
 {% endblock %}

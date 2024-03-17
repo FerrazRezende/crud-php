@@ -22,9 +22,12 @@ class DeleteController extends AbstractController
         if($client) {
             $this->entityManager->remove($client);
             $this->entityManager->flush();
+            $this->addFlash("success", "Client deleted successfully");
+            return $this->redirectToRoute('read');
+        } else {
+            $this->addFlash("error", "Client not found");
+            return $this->redirectToRoute('index');
         }
-
-        return $this->redirectToRoute('read');
     }
 
 }

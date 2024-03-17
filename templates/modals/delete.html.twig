@@ -6,7 +6,9 @@
             It will not be possible to recover this data after it is deleted.
         </p>
         <footer>
-            <button class="close-modal" id="del-confirm" style="background-color: rgba(253,0,55,0.89)" >Delete</button>
+            <form action="{{ path('delete', {'id': client.id }) }}" >
+                <input type="submit" class="close-modal" id="del-confirm" style="background-color: rgba(253,0,55,0.89)" value="Delete">
+            </form>
             <button class="secondary close-modal">
                 Cancel
             </button>
