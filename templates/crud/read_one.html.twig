@@ -1,0 +1,65 @@
+{% extends 'base/base.html.twig' %}
+{% block content %}
+{% include 'partials/header.html.twig' %}
+
+<section class="container">
+    <article id="infops">
+        <div id="infos">
+            <div id="name">
+                <div>
+                    <label>
+                        First Name
+                        <input type="text" value="{{ client.firstName }}" readonly>
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        Last name
+                        <input type="text" value="{{ client.lastName }}" readonly>
+                    </label>
+                </div>
+            </div>
+            <div id="email-text">
+                <label>
+                    E-mail
+                    <input type="text" value="{{ client.email }}" readonly>
+                </label>
+            </div>
+            <div id="observacoes">
+                <h2>Comments</h2>
+                <div class="buttons-coment">
+                    <button data-tooltip="Add comment" id="btn-add"><i class="iconoir-plus"></i></button>
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th><b>Date Time</b></th>
+                            <th><b>Comment</b></th>
+                            <th class="check-del">x</th>
+                        </tr>
+                    </thead>
+                    {% if comments %}
+                    {% for i in comments %}
+                    <tbody>
+                        <tr>
+                            <td>{{ i.createdAt|date('Y-m-d H:i:s') }}</td>
+                            <td>{{ i.content }}</td>
+                            <td class="checkbox-del"><a data-tooltip="Delete comment" href="{{ path('delete_comments', {'clientId': client.id, 'commentId': i.id}) }}"><i class="iconoir-trash"></i></a></td>
+                        </tr>
+                    </tbody>
+                    {% endfor %}
+                    {% endif %}
+                </table>
+                <div id="text-obs">
+                    <form method="post" action="create_comment/{{ client.id }}">
+                        <textarea name="comment"></textarea>
+                        <input type="submit" value="Comment">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
+
+{% endblock %}

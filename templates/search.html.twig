@@ -1,0 +1,20 @@
+{% extends 'base/base.html.twig' %}
+{% block content %}
+{% include 'partials/header.html.twig' %}
+<article class="container">
+    <div class="search-content">
+        <h1>Resultados: {{ results|length }}</h1>
+    {% for i in results %}
+        <div class="result-card">
+            <a href="{{ path('readOne', {'id': i.id}) }}">{{ i.firstName }}</a>
+            <p>
+                Complete name: {{ i.firstName }} {{ i.lastName }}<br>
+                E-mail: {{ i.email }}
+            </p>
+        </div>
+
+
+    {% endfor %}
+    </div>
+</article>
+{% endblock %}

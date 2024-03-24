@@ -1,8 +1,8 @@
-#infos {
+#infos-create {
     display: flex;
     justify-content: start;
 }
 
-#infos label {
+#infos-create label {
     margin-right: 1%;
 }

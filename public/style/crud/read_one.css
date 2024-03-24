@@ -1,0 +1,59 @@
+#infos {
+    display: flex;
+    flex-direction: column;
+}
+
+#name {
+    display: flex;
+    align-items: flex-start;
+}
+
+#email-text {
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+    margin-right: 16px;
+}
+
+#email-text input {
+    width: 98vh;
+}
+
+#infops {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttons-coment {
+    display: flex;
+    justify-content: end;
+
+}
+
+.buttons-coment button {
+    width: 64px;
+    margin: 1%;
+}
+
+
+#observacoes h2 {
+    margin-bottom: -1%;
+}
+
+
+.deletar-msg {
+    background-color: rgb(189, 27, 27);
+    width: 20%;
+}
+
+.div-del {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+#text-obs {
+    display: none;
+}

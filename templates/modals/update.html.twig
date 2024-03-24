@@ -1,7 +1,7 @@
 {% block modalUpdate %}
 <dialog id="update-modal">
     <article>
-        <form action="" method="post" id="edit-form">
+        <form action="{{ path('update', {'id': client.id}) }}" method="post" id="edit-form">
             <div class="line-form container">
                 <div>
                     <label>ID

@@ -8,6 +8,10 @@ index:
     path: /
     controller: App\Controller\IndexController::index
 
+search:
+    path: /search
+    controller: App\Controller\SearchController::search
+
 create:
     path: /create
     controller: App\Controller\crud\CreateController::create
@@ -16,6 +20,25 @@ read:
     path: /read
     controller: App\Controller\crud\ReadController::read
 
+readOne:
+    path: /read/{id}
+    controller: App\Controller\crud\ReadOneController::readOne
+
+update:
+    path: /update/{id}
+    controller: App\Controller\crud\UpdateController::update
+
 delete:
     path: /delete/{id}
     controller: App\Controller\crud\DeleteController::delete
+
+create_comment:
+    path: /read/create_comment/{clientId}
+    controller: App\Controller\CommentController::createComments
+
+delete_comments:
+    path: /read/delete_comments/{clientId}/{commentId}
+    controller: App\Controller\CommentController::deleteComments
+
+
+

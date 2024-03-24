@@ -14,8 +14,10 @@
         </ul>
     </nav>
     <div id="input-div">
-        <input type="text" id="searchinput" name="lastname" placeholder="Search" autocomplete="off">
-        <button id="meubtn">Pesquisar</button>
+        <form method="post" action="/search">
+            <input type="text" id="searchinput" name="search" placeholder="Search" autocomplete="off">
+            <input type="submit" id="meubtn" value="Search">
+        </form>
     </div>
 </header>
 {% endblock %}

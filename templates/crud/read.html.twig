@@ -21,7 +21,7 @@
                 <td>{{ client.lastName }}</td>
                 <td>{{ client.email }}</td>
                 <td>
-                    <a class="see" data-tooltip="Read"><i class="iconoir-doc-magnifying-glass-in"></i></a>
+                    <a class="see" data-tooltip="Read" href="{{ path('readOne', {'id': client.id}) }}"><i class="iconoir-doc-magnifying-glass-in"></i></a>
                     <a class="edit" data-tooltip="Edit"><i class="iconoir-page-edit"></i></a>
                     <a class="del" data-tooltip="Delete"><i class="iconoir-multiple-pages-xmark"></i></a>
                 </td>
